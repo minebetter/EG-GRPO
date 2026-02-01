@@ -187,7 +187,7 @@ Please refer to the official repositories of these benchmarks for detailed evalu
 
 
 ### 📒 Notes
-+ We modify the `reward_gdino` implementation to enforce stricter penalties when the model generates more objects than required. The original version is located at `EG-GRPO/src/eg-grpo/src/utils/reward_gdino.py`, and the revised version can be found at `EG-GRPO/src/eg-grpo/src/utils/reward_gdino_strict.py`.
+We modify the `reward_gdino` implementation to enforce stricter penalties when the model generates more objects than required. The original version is located at `EG-GRPO/src/eg-grpo/src/utils/reward_gdino.py`, and the revised version can be found at `EG-GRPO/src/eg-grpo/src/utils/reward_gdino_strict.py`.
 
 
 <!-- ### 📄 Cite
