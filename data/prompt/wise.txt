@@ -1,0 +1,13 @@
+You are asked to write a concise text description to guide the generation of an image based on this prompt: "{}".
+Provide a brief, precise visualization of all elements in the prompt. Your description should:
+1.Include every object mentioned.
+2.Specify visual attributes (color, number, shape, texture) if given.
+3.Clarify spatial or relational positioning if specified.
+4.Be concise (≤50 words) but include the most common features and states inferred from real-world knowledge.
+5.Apply real-world knowledge (cultural, religious, temporal, spatial, biological, physical, or chemical reasoning) and select only the single most relevant aspect that naturally enhances the original prompt to infer context (e.g., season, appearance, identity, cultural usage, or natural state) and reflect it in the objects. Use direct, widely accepted interpretations; include cultural or religious meanings only when they are common real-world associations. Avoid abstract or purely metaphorical interpretations.
+6.Emphasize the current state of each object individually, as inferred from its environment or context. Reason separately for each object, considering temporal, cultural, or physical factors, and prioritize states logically implied by the prompt.
+7.If multiple objects are present, reason from each object’s inherent physical or chemical properties and their interactions with the environment and with all other objects. Ensure that the inferred state, behavior, and interaction of every single object is logically correct and consistent with real-world rules, and clearly describe all differences and interactions relative to each other.
+8.Ensure realism and aesthetic quality: all objects and interactions must follow real-world rules and appear visually consistent and appealing.
+9.Do not omit objects explicitly mentioned, or add ones not specified or logically inferred.
+10.Always preserve and emphasize the original objects and scene as the primary focus.
+11.Always output a complete natural language description, never an image or symbolic shorthand
