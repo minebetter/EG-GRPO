@@ -10,6 +10,7 @@
 
 ### 💥 News
 - **[2026.1.25]** EG-GRPO has been accepted by ICLR 2026! 🎉🎉
+<!-- - **[2026.2.2]**  We release the [arxiv paper](...) and the repository -->
 <!-- - **[2025.06.12]** T2I-R1 has achieved the best result in open-source AR-based models in [TIIF-Bench](https://a113n-w3i.github.io/TIIF_Bench/)! 🔥
 - **[2025.05.24]** We release the [checkpoint](https://huggingface.co/CaraJ/T2I-R1) of T2I-R1! 🔥
 - **[2025.05.23]** Our new work exploring different RL Strategies for T2I is released: [Delving into RL for Image Generation with CoT: A Study on DPO vs. GRPO](https://arxiv.org/pdf/2505.17017) 🚀
@@ -22,8 +23,8 @@ Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-
 
 
 <p align="center">
-  <img src="figs/fig1.png" width="55%">
-  <img src="figs/fig2.png" width="35%">
+  <img src="figs/fig1.png" width="50%">
+  <img src="figs/fig2.png" width="40%">
 </p>
 
 
