@@ -19,11 +19,11 @@
 
 ## 👀 Exploring the interaction between CoT's exploration and RL's optimization
 
-Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-to-image (T2I) generation, yet the underlying interaction between CoT's exploration and RL's optimization remains unclear. In this project, We present a systematic entropy-based analysis and get some inspiring findings. Based on the findings, we propose **Entropy-Guided Group Relative Policy Optimization (EG-GRPO)**, a fine-tuning strategy that reallocates optimization budget by uncertainty.
+Combining Chain-of-Thought (CoT) with Reinforcement Learning (RL) improves text-to-image (T2I) generation, yet the underlying interaction between CoT's exploration and RL's optimization remains unclear. In this project, We present a systematic entropy-based analysis and and derive several insightful findings. Based on the findings, we propose **Entropy-Guided Group Relative Policy Optimization (EG-GRPO)**, a fine-tuning strategy that reallocates optimization budget by uncertainty.
 
 
 <p align="center">
-  <img src="figs/fig1.png" width="50%">
+  <img src="figs/fig1.png" width="51%">
   <img src="figs/fig2.png" width="40%">
 </p>
 
@@ -39,7 +39,7 @@ Our analysis reveals three main findings:
 
 
 
-Motivated by this, we use EG-GRPO: bonus high-entropy tokens to encourage structured exploration and exclude low-entropy tokens from reward-driven updates to preserve stability. Experiments on standard T2I benchmarks demonstrate that EG-GRPO achieves state-of-the-art performance.
+Motivated by this, we use **EG-GRPO**: bonus high-entropy tokens to encourage structured exploration and exclude low-entropy tokens from reward-driven updates to preserve stability. Experiments on standard T2I benchmarks demonstrate that EG-GRPO achieves state-of-the-art performance.
 
 
 ## 💪 Get Started
@@ -81,6 +81,12 @@ Install LLaVA if you want to use ORM reward
 ```bash
    cd src/eg-grpo/src/utils/LLaVA-NeXT
    pip install -e ".[train]"
+```
+
+Install hpsv2 if you want to use HPS reward
+```bash
+   cd src/eg-grpo/src/utils/HPSv2
+   pip install -e .
 ```
 
 ### Prepare Reward Model Checkpoints
@@ -162,7 +168,7 @@ Notes:
 
 
 ### 💫 Inference   
-You can train the model by yourself.
+You can train the model yourself and run inference using the following command:
 <!-- download the checkpoint from [here](https://huggingface.co/CaraJ/T2I-R1) or  -->
 
 ```bash
@@ -186,6 +192,10 @@ Please refer to the official repositories of these benchmarks for detailed evalu
 
 ### 📒 Notes
 We modify the `reward_gdino` implementation to enforce stricter penalties when the model generates more objects than required. The original version is located at `EG-GRPO/src/eg-grpo/src/utils/reward_gdino.py`, and the revised version can be found at `EG-GRPO/src/eg-grpo/src/utils/reward_gdino_strict.py`.
+
+
+### 📌 Acknowledgements
+The layout and presentation of this README are inspired by the project page of **T2I-R1**.
 
 
 <!-- ### 📄 Cite

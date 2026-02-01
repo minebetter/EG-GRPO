@@ -55,7 +55,6 @@ from utils.reward_hps import HPSv2
 from utils.reward_git import GIT
 from utils.reward_gdino_strict import GDino
 from utils.reward_orm import ORM
-from utils.reward_aes import AES
 import shutil
 
 import copy
@@ -263,8 +262,6 @@ class JanusT2IR1Trainer(Trainer):
                 reward_funcs[i] = GDino(args)
             elif isinstance(reward_func, str) and 'orm' in reward_func:
                 reward_funcs[i] = ORM(args)
-            elif isinstance(reward_func, str) and 'aes' in reward_func:
-                reward_funcs[i] = AES(args)
             else:
                 reward_funcs[i] = AutoModelForSequenceClassification.from_pretrained(
                     reward_func, num_labels=1, **model_init_kwargs
@@ -349,7 +346,7 @@ class JanusT2IR1Trainer(Trainer):
         for i, reward_func in enumerate(self.reward_funcs):
             if isinstance(reward_func, PreTrainedModel):
                 self.reward_funcs[i] = self.accelerator.prepare_model(reward_func, evaluation_mode=True)
-            elif isinstance(reward_func, HPSv2) or isinstance(reward_func, GDino) or isinstance(reward_func, GIT) or isinstance(reward_func, AES):
+            elif isinstance(reward_func, HPSv2) or isinstance(reward_func, GDino) or isinstance(reward_func, GIT):
                 reward_func.load_to_device(self.accelerator.device)
             elif isinstance(reward_func, ORM):
                 reward_func.load_to_device(self.accelerator.device)

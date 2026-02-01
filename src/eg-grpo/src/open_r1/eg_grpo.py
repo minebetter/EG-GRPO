@@ -51,10 +51,6 @@ class GRPOConfig(GRPOConfig):
     gdino_ckpt_path: str = field(default=None, metadata={"help": "The path to the gdino checkpoint"})
     gdino_config_path: str = field(default=None, metadata={"help": "The path to the gdino config"})
     orm_ckpt_path: str = field(default=None, metadata={"help": "The path to the orm checkpoint"})
-    aes_ckpt_path: str = field(default=None, metadata={"help": "The path to the aes checkpoint"})
-    clip_aes_path: str = field(default=None, metadata={"help": "The path to the aes checkpoint"})
-    aes_head_path: str = field(default=None, metadata={"help": "The path to the aes checkpoint"})
-    aes2_ckpt_path: str = field(default=None, metadata={"help": "The path to the aes checkpoint"})
 
 def cleanup():
     """Release GPU cache and system memory."""
@@ -77,8 +73,8 @@ class GRPOScriptArguments(ScriptArguments):
     """
 
     reward_funcs: list[str] = field(
-        default_factory=lambda: ["hps", "git", "gdino", "orm","aes"],
-        metadata={"help": "List of reward functions. Possible values: 'hps', 'git', 'gdino', 'orm','aes' "},
+        default_factory=lambda: ["hps", "git", "gdino", "orm"],
+        metadata={"help": "List of reward functions. Possible values: 'hps', 'git', 'gdino', 'orm',"},
     )
 
 def make_detection_prompt(nouns):
@@ -109,7 +105,6 @@ reward_funcs_registry = {
     'git': 'git',
     'gdino': 'gdino',
     'orm': 'orm',
-    'aes': 'aes',
     'unify': 'unify',
 }
 
