@@ -130,8 +130,8 @@ cd src/eg-grpo/src/analysis
 python batch_inference_janus_analysis.py \
   --model_path YOUR_MODEL_CKPT \
   --data_path test_data.txt \
-  --save_path YOUR_OUTPUT_IMAGE_PATH \
-  --mark_path YOUR_OUTPUT_DATA_PATH \
+  --save_dir YOUR_OUTPUT_IMAGE_PATH \
+  --mark_dir YOUR_OUTPUT_DATA_PATH \
   ...
 ```
 
@@ -143,8 +143,8 @@ python batch_inference_analysis.py \
   --model_path YOUR_MODEL_CKPT \
   --data_path test_data.txt \
   --reasoning_prompt_path YOUR_REASONING_PROMPT_PATH \
-  --save_path YOUR_OUTPUT_IMAGE_PATH \
-  --mark_path YOUR_OUTPUT_DATA_PATH \
+  --save_dir YOUR_OUTPUT_IMAGE_PATH \
+  --mark_dir YOUR_OUTPUT_DATA_PATH \
   ...
 ```
 
@@ -177,7 +177,7 @@ You can train the model yourself and run inference using the following command:
    --model_path YOUR_MODEL_CKPT \
    --data_path test_data.txt \
    --reasoning_prompt_path YOUR_REASONING_PROMPT_PATH \
-   --output_path YOUR_OUTPUT_PATH
+   --save_dir YOUR_OUTPUT_PATH
 ```
 
 

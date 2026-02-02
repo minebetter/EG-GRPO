@@ -243,8 +243,8 @@ def generate(
 
     # save generations as pngs
     for i in range(num_generation):
-        #save_path = os.path.join(save_dir, f"{pure_prompt}_{i:06d}.png")
-        save_path = os.path.join(save_dir, f"{pure_prompt}.png")
+        save_path = os.path.join(save_dir, f"{pure_prompt}_{i:06d}.png")
+        #save_path = os.path.join(save_dir, f"{pure_prompt}.png")
         PIL.Image.fromarray(dec[i]).save(save_path)
 
 
